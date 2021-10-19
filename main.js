@@ -27,7 +27,11 @@ class item {
 
         var edit = document.createElement('button');
         edit.classList.add('edit');
-        edit.innerHTML = "EDIT";
+        var icon = document.createElement('i');
+        icon.classList.add('far');
+        icon.classList.add('fa-edit');
+        edit.appendChild(icon);
+        // edit.innerHTML = "EDIT";
         edit.addEventListener('click', () => this.edit(input, name));
 
         var remove = document.createElement('button');
