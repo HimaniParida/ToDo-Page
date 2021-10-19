@@ -27,16 +27,20 @@ class item {
 
         var edit = document.createElement('button');
         edit.classList.add('edit');
-        var icon = document.createElement('i');
-        icon.classList.add('far');
-        icon.classList.add('fa-edit');
+        var icon = document.createElement('i'); // <i></i>
+        icon.classList.add('far'); //<i class="far"></i>
+        icon.classList.add('fa-edit'); // <i class="far fa-edit"></i>
         edit.appendChild(icon);
         // edit.innerHTML = "EDIT";
         edit.addEventListener('click', () => this.edit(input, name));
 
         var remove = document.createElement('button');
         remove.classList.add('remove');
-        remove.innerHTML = "REMOVE";
+        var icon2 = document.createElement('i');
+        icon2.classList.add('fas');
+        icon2.classList.add('fa-trash');
+        remove.appendChild(icon2);
+        //remove.innerHTML = "REMOVE";
         remove.addEventListener('click', () => this.remove(itemBox, name));
 
         container.appendChild(itemBox);
